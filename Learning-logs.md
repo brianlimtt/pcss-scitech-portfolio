@@ -167,7 +167,7 @@ else if (stageFiveOn) stageFive();"
 It allowed me to clearly separate different parts of the game. Each Boolean variable represents a specific game state, making it easier to determine which stage should run at a given time.
 <br><br>
 
-3.One challenge I encountered was ensuring that only one stage was active at a time. Multiple stage variables could accidentally remain set to true, causing incorrect behavior and the wrongly desired stage loading overtop.<br>
+3. One challenge I encountered was ensuring that only one stage was active at a time. Multiple stage variables could accidentally remain set to true, causing incorrect behavior and the wrongly desired stage loading overtop.<br>
 "stageTwoOn = true;
 stageOneOn = false;"<br>
 This ensured that only one stage was active at a time and allowed the game to progress smoothly. <br>
@@ -210,7 +210,7 @@ This custom function checks whether the player has collided with another object 
 I chose to create a custom function because collision detection is needed many times throughout the game. Instead of rewriting the same code repeatedly, I could call a single function whenever I needed to check for a collision.<br>
 <br>
 
-3.One challenge I encountered was preventing players from performing actions when they should not be allowed to. For example, I needed to stop the player from jumping repeatedly while already in the air. <br>
+3. One challenge I encountered was preventing players from performing actions when they should not be allowed to. For example, I needed to stop the player from jumping repeatedly while already in the air. <br>
 "if (keyCode == UP && blobJumping == false) {
     blobFalling = false;
     blobJumping = true;
