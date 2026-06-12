@@ -174,3 +174,51 @@ This ensured that only one stage was active at a time and allowed the game to pr
 
   <hr>
 </details>
+
+
+
+<details style="border:1px solid #ddd; border-radius:10px; padding:15px; background-color:#fafafa; margin-bottom:15px;">
+  <summary style="font-size:18px; font-weight:bold; cursor:pointer;">
+    Use of Custom Functions & Error Checking/Restrictions
+  </summary>
+
+  <br>
+
+  <strong> Use of Custom Functions & Error Checking/Restrictions </strong><br>
+1. What concept did you implement? State the topic clearly and include a relevant code snippet.<br>
+2. Where did you use it, and why did you implement it that way? Explain the purpose of the code and your reasoning behind the approach you chose.<br>
+3. What challenges did you encounter, and how did you fix them? Describe any issues you faced and the steps you took to resolve them<br>
+
+<br><br>
+1. Cuustom functions allowed me to reuse code throughout my game, while error checking ensured that players could not perform actions that would break the game.<br>
+"boolean checkCollision(int objectX, int objectY, int obXlength, int obYlength) {
+  if (blobX > objectX && blobX+75 < objectX+obXlength &&
+      blobY > objectY && blobY < objectY+obYlength) {
+    return true;
+  }
+  return false;
+}" <br><br>
+This custom function checks whether the player has collided with another object and returns either true or false.<br>
+<br>
+2. I used the checkCollision() function throughout the game whenever the player interacted with spikes, powerups, or the sewer exit. <br>
+"if (checkCollision(powerUpX, powerUpY, 150, 75)) {
+    blobSpeed = 10;
+}if (checkCollision(sewerTunnelX, sewerTunnelY, 150, 100)) {
+    stageNum = stageNum + 1;
+}"<br><br>
+
+I chose to create a custom function because collision detection is needed many times throughout the game. Instead of rewriting the same code repeatedly, I could call a single function whenever I needed to check for a collision.<br>
+<br>
+
+3.One challenge I encountered was preventing players from performing actions when they should not be allowed to. For example, I needed to stop the player from jumping repeatedly while already in the air. <br>
+"if (keyCode == UP && blobJumping == false) {
+    blobFalling = false;
+    blobJumping = true;
+    velocity.y = -7;
+}"
+<br><br>
+
+I ended up using a boolean variable to check if the player was in the air already and also made sure that the player could also only jump when the player was on the ground. Without this error checking, players could continuously press the jump key and basically fly overtop of all the obstacles on the map. 
+
+  <hr>
+</details>
