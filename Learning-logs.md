@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Projects
+title: Learning Logs
 ---
 
-# My Projects
+# Learning Logs
 
 <details style="border:1px solid #ddd; border-radius:10px; padding:15px; background-color:#fafafa; margin-bottom:15px;">
   <summary style="font-size:18px; font-weight:bold; cursor:pointer;">
