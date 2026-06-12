@@ -57,7 +57,7 @@ Whenever the player started a new game or changed stages, this function restored
 2. Where did you use it, and why did you implement it that way? Explain the purpose of the code and your reasoning behind the approach you chose.<br>
 3. What challenges did you encounter, and how did you fix them? Describe any issues you faced and the steps you took to resolve them<br>
 <br><br>
-1. One concept I implemented was selection structures (if/else statements). Selection structures allow the program to folllow instructions based on specific conditions and execute different code depending on the situation.<br>
+1. Selection structures allow the program to folllow instructions based on specific conditions and execute different code depending on the situation.<br>
    "if (blobLives <= 0) {
     gameEnd();
 }if (difficultySelected == 1) {
@@ -101,13 +101,76 @@ This solution prevented overlapping screens and ensured that the game progressed
   <br>
 
   <strong> Repitition Structure </strong><br>
-1. What concept did you implement? State the topic clearly and include a relevant code snippet.
-2. Where did you use it, and why did you implement it that way? Explain the purpose of the code and your reasoning behind the approach you chose.
-3. What challenges did you encounter, and how did you fix them? Describe any issues you faced and the steps you took to resolve them
+1. What concept did you implement? State the topic clearly and include a relevant code snippet.<br>
+2. Where did you use it, and why did you implement it that way? Explain the purpose of the code and your reasoning behind the approach you chose.<br>
+3. What challenges did you encounter, and how did you fix them? Describe any issues you faced and the steps you took to resolve them<br>
 
-   
+<br><br>
+1. Repetition structures allow a section of code to run multiple times until a condition is met. In my game, I used a do-while loop to repeatedly generate a random stage until it was different from the previously selected stage.
+   <br>
+   "void diffInfinite() {
+  int nextStage = 0;
+
+  do {
+    nextStage = int(random(1, 6));
+  } while (nextStage == currentStage);
+
+  currentStage = nextStage;
+}"
+<br><br>
+2. I used this repetition structure in the diffInfinite() method, which controls the Infinite Mode of the game. Every time a new stage is selected, the loop continues generating random stage numbers until it finds one that is different from the current stage. <br>
+I chose this approach because it guarantees variety in gameplay and it also allows for the player to infinitely play the game until the either lose by having no lives or they want to quit, allowing friends to compete with one another for the highest score. <br>
+<br>
+3. The challenge I faced was the stages that kept regenerating as the draw function was being called every frame, causing every new frame to be a new stage in the infinite mode. This would make it practically impossible to fully play a stage without it changing the next frame. 
+
+Unfortunately, this was an issue that I was not able to solve as I did not have enough time to complete all desired features.
 
 
+  <hr>
+</details>
+
+
+<details style="border:1px solid #ddd; border-radius:10px; padding:15px; background-color:#fafafa; margin-bottom:15px;">
+  <summary style="font-size:18px; font-weight:bold; cursor:pointer;">
+    Arrays & Data Structures
+  </summary>
+
+  <br>
+
+  <strong> Arrays & Data Structures </strong><br>
+1. What concept did you implement? State the topic clearly and include a relevant code snippet.<br>
+2. Where did you use it, and why did you implement it that way? Explain the purpose of the code and your reasoning behind the approach you chose.<br>
+3. What challenges did you encounter, and how did you fix them? Describe any issues you faced and the steps you took to resolve them<br>
+
+<br><br>
+1. I used a collection of Boolean variables to track which stage, tutorial, or game screen was currently active.<br>
+"boolean tutorialOneOn = false;
+boolean tutorialTwoOn = false;
+boolean stageOneOn = false;
+boolean stageTwoOn = false;
+boolean stageThreeOn = false;
+boolean stageFourOn = false;
+boolean stageFiveOn = false;"
+
+<br>
+
+It was after submission where I reazlied that in this scnario, an array might have been a more efficient way of dispalying my code as all values here were false. 
+<br><br>
+
+2. I used these Boolean variables throughout the game to control progression between tutorials and stages.<br>
+   "if (stageOneOn) stageOne();
+else if (stageTwoOn) stageTwo();
+else if (stageThreeOn) stageThree();
+else if (stageFourOn) stageFour();
+else if (stageFiveOn) stageFive();"
+<br><br>
+It allowed me to clearly separate different parts of the game. Each Boolean variable represents a specific game state, making it easier to determine which stage should run at a given time.
+<br><br>
+
+3.One challenge I encountered was ensuring that only one stage was active at a time. Multiple stage variables could accidentally remain set to true, causing incorrect behavior and the wrongly desired stage loading overtop.<br>
+"stageTwoOn = true;
+stageOneOn = false;"<br>
+This ensured that only one stage was active at a time and allowed the game to progress smoothly. <br>
 
   <hr>
 </details>
