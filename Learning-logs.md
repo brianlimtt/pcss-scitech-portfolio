@@ -14,7 +14,7 @@ title: Learning Logs
 
   <strong> Variables & Data Tracking </strong><br>
 1. What concept did you implement? State the topic clearly and include a relevant code snippet.
-2. Where did you use it, and why di dyou implement it that way? Explain the purpose of the code and your reasoning behind the approach you chose.
+2. Where did you use it, and why did you implement it that way? Explain the purpose of the code and your reasoning behind the approach you chose.
 3. What challenges did you encounter, and how did you fix them? Describe any issues you faced and the steps you took to resolve them
 <br>
 1. Concepts I implemented for variables included variables that allowed me to store important information about the player’s progress and update it throughout the game.
@@ -53,7 +53,7 @@ Whenever the player started a new game or changed stages, this function restored
 
   <strong> Selection Structure </strong><br>
 1. What concept did you implement? State the topic clearly and include a relevant code snippet.
-2. Where did you use it, and why di dyou implement it that way? Explain the purpose of the code and your reasoning behind the approach you chose.
+2. Where did you use it, and why did you implement it that way? Explain the purpose of the code and your reasoning behind the approach you chose.
 3. What challenges did you encounter, and how did you fix them? Describe any issues you faced and the steps you took to resolve them
 
 1. One concept I implemented was selection structures (if/else statements). Selection structures allow the program to folllow instructions based on specific conditions and execute different code depending on the situation.
@@ -101,7 +101,7 @@ This solution prevented overlapping screens and ensured that the game progressed
 
   <strong> Repitition Structure </strong><br>
 1. What concept did you implement? State the topic clearly and include a relevant code snippet.
-2. Where did you use it, and why di dyou implement it that way? Explain the purpose of the code and your reasoning behind the approach you chose.
+2. Where did you use it, and why did you implement it that way? Explain the purpose of the code and your reasoning behind the approach you chose.
 3. What challenges did you encounter, and how did you fix them? Describe any issues you faced and the steps you took to resolve them
 
    
